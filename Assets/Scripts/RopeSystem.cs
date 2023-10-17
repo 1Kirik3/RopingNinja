@@ -185,6 +185,8 @@ public class RopeSystem : MonoBehaviour
 
             if (isSwinging)
             {
+                if (transform.position.y > _ropeHingeAnchor.transform.position.y)
+                    _horizontalInput *= -1;
 
                 var playerToHookDirection = (_ropeHook - (Vector2)transform.position).normalized;
 
@@ -193,17 +195,15 @@ public class RopeSystem : MonoBehaviour
                 {
                     perpendicularDirection = new Vector2(-playerToHookDirection.y, playerToHookDirection.x);
                     var leftPerpPos = (Vector2)transform.position - perpendicularDirection * -2f;
-                    Debug.DrawLine(transform.position, leftPerpPos, Color.green, 0f);
                 }
                 else
                 {
                     perpendicularDirection = new Vector2(playerToHookDirection.y, -playerToHookDirection.x);
                     var rightPerpPos = (Vector2)transform.position + perpendicularDirection * 2f;
-                    Debug.DrawLine(transform.position, rightPerpPos, Color.green, 0f);
                 }
 
                 var force = perpendicularDirection * _swingForce;
-                Debug.Log(force);
+                
                 _playerRB.AddForce(force, ForceMode2D.Force);
             }
         }

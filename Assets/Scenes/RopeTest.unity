@@ -758,7 +758,7 @@ MonoBehaviour:
   _swingForce: 4
   _maxRopeSize: 4
   _minRopeSize: 1
-  _maxSwingSpeed: {x: 8, y: 8}
+  _maxSwingSpeed: {x: 10, y: 10}
 --- !u!232 &550896619
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -895,9 +895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776bba3e7eab83c4497dd16410aa654f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxMovementSpeed: 10
-  _acceleration: 0
-  _decceleration: 0
 --- !u!1 &1342394479
 GameObject:
   m_ObjectHideFlags: 0
