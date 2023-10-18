@@ -17,6 +17,11 @@ public class Projectile : MonoBehaviour
         ApplyMovement();
     }
 
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
     private void ApplyMovement()
     {
         transform.position = (Vector2)transform.position + (_movementVector * Time.deltaTime);
