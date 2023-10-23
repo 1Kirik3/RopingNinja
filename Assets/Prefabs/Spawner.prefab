@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2515432937568302836}
   - component: {fileID: 5389761318930073996}
-  - component: {fileID: 6926028577193155690}
+  - component: {fileID: 6580723286255285341}
+  - component: {fileID: 5422601086663170646}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -78,7 +79,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6926028577193155690
+--- !u!114 &6580723286255285341
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,6 +91,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8b09ac9f219f04fbfbb75f940bf5b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_projectilePrefab: {fileID: 1842436602952866253, guid: ba226de3602a1114b957d1be14d841d9, type: 3}
+  m_prefab: {fileID: 1842436602952866253, guid: ba226de3602a1114b957d1be14d841d9, type: 3}
   m_minSpawnDelay: 1
   m_maxSpawnDelay: 10
+--- !u!114 &5422601086663170646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3698200208601264248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be8b09ac9f219f04fbfbb75f940bf5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_prefab: {fileID: 5685943702195424303, guid: 464f772014815b24cb4f67f14c6e96e0, type: 3}
+  m_minSpawnDelay: 3
+  m_maxSpawnDelay: 7

@@ -16,7 +16,10 @@ public class Kunai : Projectile
     {
         HealthPoints playerHealthPoints = collision?.GetComponent<HealthPoints>();
         if (playerHealthPoints)
+        {
             playerHealthPoints.TakeDamage();
+            Destroy(gameObject);
+        }
     }
 
     private void OnBecameInvisible()

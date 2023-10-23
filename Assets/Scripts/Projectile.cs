@@ -16,11 +16,14 @@ public class Projectile : MonoBehaviour
         {
             _movementVector = new Vector2(m_projectileSpeed, 0);
             _movementVector *= Mathf.Sign(m_mainPlatform.position.x - transform.position.x);
+            if (m_mainPlatform.position.x - transform.position.x < 0)
+                gameObject.transform.Rotate(0, 0, 180);
         }
         else
         {
             _movementVector = new Vector2(0, m_projectileSpeed);
             _movementVector *= Mathf.Sign(m_mainPlatform.position.y - transform.position.y);
+            gameObject.transform.Rotate(0, 0, 90 * Mathf.Sign(m_mainPlatform.position.y - transform.position.y));
         }
     }
 

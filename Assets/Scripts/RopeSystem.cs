@@ -181,7 +181,7 @@ public class RopeSystem : MonoBehaviour
     {
         if (_horizontalInput != 0)
         {
-            _playerSprite.flipX = _horizontalInput > 0;
+            //_playerSprite.flipX = _horizontalInput > 0;
 
             if (isSwinging)
             {
