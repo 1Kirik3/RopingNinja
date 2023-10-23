@@ -2,32 +2,15 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private float m_projectileSpeed;
-    [SerializeField] private Transform m_mainPlatform;
+    [SerializeField] protected float m_projectileSpeed;
+    [SerializeField] protected Transform m_mainPlatform;
 
     private Vector2 _movementVector;
 
-    private void Start()
-    {
-        DetermineDirection();
-    }
+    protected void ApplyMovement() 
+        => transform.position = (Vector2)transform.position + (_movementVector * Time.deltaTime);
 
-    private void FixedUpdate()
-    {
-        ApplyMovement();
-    }
-
-    private void OnBecameInvisible()
-    {
-        Destroy(gameObject);
-    }
-
-    private void ApplyMovement()
-    {
-        transform.position = (Vector2)transform.position + (_movementVector * Time.deltaTime);
-    }
-
-    private void DetermineDirection()
+    protected void DetermineDirection()
     {
         if (Mathf.Abs(transform.position.x - m_mainPlatform.position.x) > Mathf.Abs(transform.position.y - m_mainPlatform.transform.position.y))
         {
