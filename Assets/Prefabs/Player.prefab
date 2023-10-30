@@ -355,7 +355,7 @@ MonoBehaviour:
   _ropeJoint: {fileID: 3437856099412535985}
   _ropeMaxCastDistance: 15
   _climbSpeed: 5
-  _swingForce: 5
+  _swingForce: 7
   _maxRopeSize: 4
   _minRopeSize: 1
   _maxSwingSpeed: {x: 10, y: 10}
