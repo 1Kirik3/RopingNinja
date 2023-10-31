@@ -4,6 +4,7 @@ public class HealthPoints : MonoBehaviour
 {
     [SerializeField] private HealthBar m_playerHealthbar;
     [SerializeField] private int m_maxHealthpoints;
+    [SerializeField] private GameObject m_deathCanvas;
     public int CurrentHelth { get; private set; }
 
     private void Start()
@@ -15,7 +16,10 @@ public class HealthPoints : MonoBehaviour
     {
         CurrentHelth--;
         if (CurrentHelth <= 0)
+        {
             Destroy(gameObject);
+            m_deathCanvas.SetActive(true);
+        }
         m_playerHealthbar.UpdateHealthbar();
     }
 
