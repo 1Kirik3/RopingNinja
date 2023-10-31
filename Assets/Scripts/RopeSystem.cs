@@ -14,10 +14,17 @@ public class RopeSystem : MonoBehaviour
 
     private Vector2 _playerPosition;
     private Rigidbody2D _playerRB;
-    private SpriteRenderer _playerSprite;
     private float _horizontalInput;
     private float _verticalInput;
     private bool _isColliding;
+
+    [Header("Input buttons")]
+    [SerializeField] private MovementButton m_leftButton;
+    [SerializeField] private MovementButton m_rightButton;
+    [SerializeField] private MovementButton m_topButton;
+    [SerializeField] private MovementButton m_downButton;
+
+    [Space]
 
     [SerializeField] private LineRenderer _ropeRenderer;
     [SerializeField] private LayerMask _ropeLayerMask;
@@ -35,7 +42,6 @@ public class RopeSystem : MonoBehaviour
         _ropeJoint.enabled = false;
         _playerPosition = transform.position;
         _playerRB = GetComponent<Rigidbody2D>();
-        _playerSprite = GetComponent<SpriteRenderer>();
         _ropeHingeAnchorRb = _ropeHingeAnchor.GetComponent<Rigidbody2D>();
         _ropeHingeAnchorSprite = _ropeHingeAnchor.GetComponent<SpriteRenderer>();
     }
@@ -173,8 +179,8 @@ public class RopeSystem : MonoBehaviour
 
     public void GetInputVector()
     {
-        _horizontalInput = Input.GetAxisRaw("Horizontal");
-        _verticalInput = Input.GetAxisRaw("Vertical");
+        _horizontalInput = m_rightButton.GetMovementValue() + m_leftButton.GetMovementValue();
+        _verticalInput = m_topButton.GetMovementValue() + m_downButton.GetMovementValue();
     }
 
     public void GetHorizontalInput(float value) 

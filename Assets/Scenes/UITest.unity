@@ -698,6 +698,7 @@ GameObject:
   - component: {fileID: 847864436}
   - component: {fileID: 847864435}
   - component: {fileID: 847864434}
+  - component: {fileID: 847864437}
   m_Layer: 5
   m_Name: Right
   m_TagString: Untagged
@@ -819,6 +820,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847864432}
   m_CullTransparentMesh: 1
+--- !u!114 &847864437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847864432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bfb78413134b954291511b5a36deb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementValue: 1
 --- !u!1 &850007666
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,6 +845,7 @@ GameObject:
   - component: {fileID: 850007670}
   - component: {fileID: 850007669}
   - component: {fileID: 850007668}
+  - component: {fileID: 850007671}
   m_Layer: 5
   m_Name: Top
   m_TagString: Untagged
@@ -952,6 +967,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850007666}
   m_CullTransparentMesh: 1
+--- !u!114 &850007671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850007666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bfb78413134b954291511b5a36deb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementValue: 1
 --- !u!1 &895120821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1190,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6365752654898386019, guid: 9efb64b242f96dd4f902be63fa7f34d9, type: 3}
+      propertyPath: m_topButton
+      value: 
+      objectReference: {fileID: 850007671}
+    - target: {fileID: 6365752654898386019, guid: 9efb64b242f96dd4f902be63fa7f34d9, type: 3}
+      propertyPath: m_downButton
+      value: 
+      objectReference: {fileID: 1487990490}
+    - target: {fileID: 6365752654898386019, guid: 9efb64b242f96dd4f902be63fa7f34d9, type: 3}
+      propertyPath: m_leftButton
+      value: 
+      objectReference: {fileID: 1266309253}
+    - target: {fileID: 6365752654898386019, guid: 9efb64b242f96dd4f902be63fa7f34d9, type: 3}
+      propertyPath: m_rightButton
+      value: 
+      objectReference: {fileID: 847864437}
     - target: {fileID: 6365752654898386019, guid: 9efb64b242f96dd4f902be63fa7f34d9, type: 3}
       propertyPath: _ropeHingeAnchor
       value: 
@@ -1636,6 +1680,7 @@ GameObject:
   - component: {fileID: 1266309252}
   - component: {fileID: 1266309251}
   - component: {fileID: 1266309250}
+  - component: {fileID: 1266309253}
   m_Layer: 5
   m_Name: Left
   m_TagString: Untagged
@@ -1757,6 +1802,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266309248}
   m_CullTransparentMesh: 1
+--- !u!114 &1266309253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266309248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bfb78413134b954291511b5a36deb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementValue: -1
 --- !u!1 &1487990485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,6 +1827,7 @@ GameObject:
   - component: {fileID: 1487990489}
   - component: {fileID: 1487990488}
   - component: {fileID: 1487990487}
+  - component: {fileID: 1487990490}
   m_Layer: 5
   m_Name: Down
   m_TagString: Untagged
@@ -1890,6 +1949,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487990485}
   m_CullTransparentMesh: 1
+--- !u!114 &1487990490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487990485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bfb78413134b954291511b5a36deb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementValue: -1
 --- !u!114 &1488986781 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7853547170196882280, guid: 9efb64b242f96dd4f902be63fa7f34d9, type: 3}
