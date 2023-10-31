@@ -177,6 +177,12 @@ public class RopeSystem : MonoBehaviour
         _verticalInput = Input.GetAxisRaw("Vertical");
     }
 
+    public void GetHorizontalInput(float value) 
+        => _horizontalInput = value;
+
+    public void GetVerticalInput(float value)
+        => _verticalInput = value;
+
     public void ApplySwingingForce()
     {
         if (_horizontalInput != 0)
