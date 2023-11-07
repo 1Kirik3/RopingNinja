@@ -17,7 +17,8 @@ public class Projectile : MonoBehaviour
             _movementVector = new Vector2(m_projectileSpeed, 0);
             _movementVector *= Mathf.Sign(m_mainPlatform.position.x - transform.position.x);
             if (m_mainPlatform.position.x - transform.position.x < 0)
-                gameObject.transform.Rotate(0, 0, 180);
+                gameObject.transform.GetComponent<SpriteRenderer>().flipX = true;
+
         }
         else
         {

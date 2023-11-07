@@ -1,4 +1,5 @@
 using UnityEngine;
+using DG.Tweening;
 
 public class HealthPoints : MonoBehaviour
 {
@@ -18,7 +19,9 @@ public class HealthPoints : MonoBehaviour
         if (CurrentHelth <= 0)
         {
             Destroy(gameObject);
+            m_deathCanvas.transform.localScale = Vector3.zero;
             m_deathCanvas.SetActive(true);
+            m_deathCanvas.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.Linear);
         }
         m_playerHealthbar.UpdateHealthbar();
     }

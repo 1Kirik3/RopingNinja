@@ -3869,8 +3869,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 786746472}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 3
+        m_MethodName: OnPress
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3929,6 +3929,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd0ac149bcde5a4786236ceee883623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_sceneToLoad: 1
+  m_endScale: 0.8
+  m_animationDuration: 0.2
 --- !u!1 &859234555
 GameObject:
   m_ObjectHideFlags: 0
@@ -7497,6 +7500,7 @@ GameObject:
   - component: {fileID: 1635448931}
   - component: {fileID: 1635448930}
   - component: {fileID: 1635448929}
+  - component: {fileID: 1635448932}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -7567,10 +7571,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2019675885}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1635448932}
+        m_TargetAssemblyTypeName: ScaleAnimation, Assembly-CSharp
+        m_MethodName: CloseAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7578,30 +7582,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1308922779}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1894170527}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1635448930
 MonoBehaviour:
@@ -7641,6 +7621,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635448927}
   m_CullTransparentMesh: 1
+--- !u!114 &1635448932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635448927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef3f27a6a7cc8849af0de5210726988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToIncrease:
+  - {fileID: 1894170527}
+  - {fileID: 1308922779}
+  objectsToDecrease:
+  - {fileID: 2019675885}
+  m_timeToScale: 0.3
 --- !u!1 &1640943337
 GameObject:
   m_ObjectHideFlags: 0
@@ -7974,7 +7972,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1720693939}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: ExitGame
+        m_MethodName: OnPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8034,6 +8032,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd0ac149bcde5a4786236ceee883623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_sceneToLoad: 0
+  m_endScale: 0.8
+  m_animationDuration: 0.2
 --- !u!1 &1741413988
 GameObject:
   m_ObjectHideFlags: 0
@@ -8595,6 +8596,7 @@ GameObject:
   - component: {fileID: 1945778815}
   - component: {fileID: 1945778814}
   - component: {fileID: 1945778813}
+  - component: {fileID: 1945778816}
   m_Layer: 5
   m_Name: StoreButton
   m_TagString: Untagged
@@ -8666,34 +8668,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2019675885}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1308922779}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1894170527}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1945778816}
+        m_TargetAssemblyTypeName: ScaleAnimation, Assembly-CSharp
+        m_MethodName: CloseAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8740,6 +8718,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945778811}
   m_CullTransparentMesh: 1
+--- !u!114 &1945778816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945778811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef3f27a6a7cc8849af0de5210726988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToIncrease:
+  - {fileID: 2019675885}
+  objectsToDecrease:
+  - {fileID: 1894170527}
+  - {fileID: 1308922779}
+  m_timeToScale: 0.3
 --- !u!1 &2004139394
 GameObject:
   m_ObjectHideFlags: 0
