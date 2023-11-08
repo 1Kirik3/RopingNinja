@@ -7,12 +7,15 @@ public class Coin : Projectile
 
     public static Action onCoinCollet;
     [SerializeField] private float m_animationTime;
+    private AudioSource _audioSource;
     private bool _isPicked = false;
     private Vector3 _rotationAngle = new Vector3(0, 360, 0);
     private Vector3 _startPosition;
 
     private void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
         _startPosition = GetComponent<Transform>().position;
         DetermineDirection();
         AnimateCoin();
@@ -32,6 +35,7 @@ public class Coin : Projectile
         if (playerInventory)
         {
             onCoinCollet?.Invoke();
+            _audioSource.PlayOneShot(this.m_collisionSound);
             _isPicked = true;
             gameObject.transform.DOKill();
             gameObject.transform.DOMoveY(_startPosition.y + 1f, m_animationTime/2).SetEase(Ease.Linear);

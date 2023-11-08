@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] protected AudioClip m_collisionSound;
     [SerializeField] protected float m_projectileSpeed;
     [SerializeField] protected Transform m_mainPlatform;
 
