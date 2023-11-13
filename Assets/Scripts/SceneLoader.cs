@@ -25,6 +25,7 @@ public class SceneLoader : MonoBehaviour
 
     private void LoadScene()
     {
+        
         GetComponentInParent<Transform>().DOKill();
         SceneManager.LoadScene(m_sceneToLoad);
     }

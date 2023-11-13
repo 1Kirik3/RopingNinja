@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,6 +119,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -131,7 +144,7 @@ TextureImporter:
         width: 48
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,6 +152,48 @@ TextureImporter:
       bones: []
       spriteID: 17ae890c1b35f1344b6ddfcf732af763
       internalID: 787351487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninja-char-sprite-1024x918_1
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 367
+        width: 44
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6413e10aa32f94c45855a3b9d1609ff8
+      internalID: 2069907120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninja-char-sprite-1024x918_2
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 393
+        width: 91
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f1d4955e9c46b47996b1fd9aa2d149
+      internalID: -501330779
       vertices: []
       indices: 
       edges: []
@@ -155,6 +210,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       ninja-char-sprite-1024x918_0: -1278273427
+      ninja-char-sprite-1024x918_1: 2069907120
+      ninja-char-sprite-1024x918_2: -501330779
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

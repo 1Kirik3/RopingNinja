@@ -20,7 +20,7 @@ public class Kunai : Projectile
     private void OnTriggerEnter2D(Collider2D collision)
     {
         HealthPoints playerHealthPoints = collision?.GetComponent<HealthPoints>();
-        if (playerHealthPoints)
+        if (collision.gameObject.layer == 7)
         {
             AudioSource.PlayClipAtPoint(this.m_collisionSound, transform.position, _randomVolume);
             _audioSource.PlayOneShot(this.m_collisionSound);

@@ -18,6 +18,7 @@ public class HealthPoints : MonoBehaviour
         CurrentHelth--;
         if (CurrentHelth <= 0)
         {
+            gameObject.GetComponent<TrailRenderer>().enabled = false;
             Destroy(gameObject);
             m_deathCanvas.transform.localScale = Vector3.zero;
             m_deathCanvas.SetActive(true);

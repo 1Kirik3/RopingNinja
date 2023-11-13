@@ -18,7 +18,6 @@ public class ScaleAnimation : MonoBehaviour
             item.SetActive(true);
             item.gameObject.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.Linear);
         }
-        
     }
 
     public void CloseAnimation()

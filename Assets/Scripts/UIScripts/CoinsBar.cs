@@ -27,5 +27,5 @@ public class CoinsBar : MonoBehaviour
     }
 
     public void UpdateCounterString()
-        => _coinsCounterText.SetText(PlayerInventory.coinsCounter.ToString());
+        => _coinsCounterText.SetText(PlayerInventory.Instance.CoinsCounter.ToString());
 }

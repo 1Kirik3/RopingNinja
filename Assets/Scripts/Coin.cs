@@ -31,12 +31,12 @@ public class Coin : Projectile
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerInventory playerInventory = collision?.GetComponent<PlayerInventory>();
-        if (playerInventory)
+        if (collision.gameObject.layer == 7)
         {
             onCoinCollet?.Invoke();
             _audioSource.PlayOneShot(this.m_collisionSound);
             _isPicked = true;
+            gameObject.GetComponent<Collider2D>().enabled = false;
             gameObject.transform.DOKill();
             gameObject.transform.DOMoveY(_startPosition.y + 1f, m_animationTime/2).SetEase(Ease.Linear);
             gameObject.transform.DORotate(_rotationAngle, m_animationTime/10).SetEase(Ease.Linear).SetLoops(3, LoopType.Incremental).OnComplete(DestroyCoin);
@@ -44,14 +44,18 @@ public class Coin : Projectile
     }
 
     private void AnimateCoin()
-        => gameObject.transform.DORotate(_rotationAngle, m_animationTime, RotateMode.FastBeyond360).SetEase(Ease.Linear).SetLoops(-1, LoopType.Restart);
+    {
+        if (gameObject.transform != null)
+            gameObject.transform.DORotate(_rotationAngle, m_animationTime, RotateMode.FastBeyond360).SetEase(Ease.Linear).SetLoops(-1, LoopType.Restart);
+    }
+        
 
     private void OnBecameInvisible()
     {
         DestroyCoin();
     }
 
-    private void DestroyCoin()
+    public void DestroyCoin()
     {
         gameObject.transform.DOKill();
         Destroy(gameObject);
